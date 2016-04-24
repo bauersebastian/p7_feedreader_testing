@@ -48,7 +48,9 @@ $(function() {
          */
 
         it('have a defined name and are not empty', function() {
-            for (x in allFeeds) {
+            var x = 0;
+            var allFeedsLength = allFeeds.length;
+            for (; x < allFeedsLength; x++) {
                 expect(allFeeds[x].name).toBeDefined();
                 expect(allFeeds[x].name.length).not.toBe(0);
             }
